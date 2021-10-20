@@ -9,31 +9,20 @@ class MaterialManager:
 
     def changeMaterial(self, material) -> bool:
         returnText = ""
-<<<<<<< HEAD
+        textBaseForValidMaterial = "Material is changed to"
         
-=======
->>>>>>> bruce-alloyX
         match material:
             case materialType.Titanium:
                 self.carManager.setMaterial(materialType.Titanium)
-                returnText = "Material is changed to Titanium."
+                returnText = textBaseForValidMaterial + " Titanium."
             case materialType.Carbon:
                 self.carManager.setMaterial(materialType.Carbon)
-                returnText = "Material is changed to Carbon."
-<<<<<<< HEAD
-            case materialType.Vibranium:
-                self.carManager.setMaterial(materialType.Vibranium)
-                returnText = "Material is changed to Vibranium."
-            case _:
-                returnText = "Material selection is invalid."
-                
-=======
+                returnText = textBaseForValidMaterial + " Carbon."
             case materialType.AlloyX:
                 self.carManager.setMaterial(materialType.AlloyX)
-                returnText = "Material is changed to AlloyX."
+                returnText = textBaseForValidMaterial + " AlloyX."
             case _:
                 returnText = "Material selection is invalid."
->>>>>>> bruce-alloyX
         return self._announceMaterial(returnText)
 
     def _announceMaterial(self, text: str) -> bool:
